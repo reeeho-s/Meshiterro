@@ -1,9 +1,11 @@
 <h2>Sign up</h2>
 
+<!--form_forからform_withに変える-->
 <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
 
   <%= render "devise/shared/error_messages", resource: resource %>
   
+  <!-- 名前を保存するフォーム追加　-->
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name, autofocus: true %>
